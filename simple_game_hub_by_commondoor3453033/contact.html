@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omni Gamzz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: rgba(0, 14, 174, 0.841);
+            /* Poki Teal */
+            --secondary-color: rgb(0, 21, 138);
+            /* Darker Teal for hover/accents */
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --background-color: #f7f7f7;
+            /* Light grey background */
+            --card-background: #ffffff;
+            /* White cards */
+            --border-color: #eeeeee;
+            /* Very light grey border */
+            --header-height: 60px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding-top: var(--header-height);
+            /* Prevent content overlap by sticky header */
+        }
+
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            animation: popIn 0.6s ease;
+            transition: all 0.3s ease;
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .contact-form h2 {
+            margin-bottom: 25px;
+            color: #00218a;
+            text-align: center;
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 14px;
+            background: #f0f4ff;
+            font-size: 16px;
+            transition: 0.3s;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            background: #e0e7ff;
+            box-shadow: 0 0 12px rgba(0, 21, 138, 0.8);
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, rgb(0, 14, 174), rgb(0, 21, 138));
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(135deg, rgb(0, 21, 138), rgb(0, 14, 174));
+            transform: scale(1.03);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 30px;
+                max-width: 90%;
+            }
+
+            .contact-form h2 {
+                font-size: 24px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 14px;
+                font-size: 15px;
+            }
+
+            .contact-form button {
+                padding: 14px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 20px;
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 10px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .contact-form h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-header">
+        <div class="container header-container">
+            <div class="logo">Omni Gamezz</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br><br>
+
+    <form class="contact-form" action="https://formspree.io/f/mwkgeojd" method="POST">
+        <h2>Get in Touch</h2>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message 🚀</button>
+    </form>
+
+    <footer>
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2023 Omni Gamezz. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
